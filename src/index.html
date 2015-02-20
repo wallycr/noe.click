@@ -1,0 +1,67 @@
+---
+layout: default
+title: Home
+---
+    
+    {% include carousel.html %}
+
+    <div class="container page" id="portafolio">
+      <h2>Portafolio</h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, asperiores ea beatae. Deleniti qui, quas sed voluptate fugit nihil sint maxime distinctio. Accusamus quibusdam recusandae laboriosam enim. Expedita, laudantium sunt!</p>
+        </div>
+        <div class="col-sm-4">
+          <p>Ipsum aliquam aspernatur enim, sed, voluptatibus dolorum dolore vitae dolor non, officia consequatur provident tempora assumenda. Sed nihil sit voluptates debitis impedit vero aspernatur ullam, architecto placeat facilis quos. Quos.</p>
+        </div>
+        <div class="col-sm-4">
+          <p>Sapiente inventore facere sit distinctio debitis delectus repellendus, explicabo aliquid molestias, veniam, autem quasi qui dignissimos! Ipsum soluta, veniam tempora repudiandae natus, similique nostrum aperiam, laborum sunt amet voluptatem esse.</p>
+        </div>
+      </div>
+    </div>
+    <div class="page" id="blog">
+      <h2>Mi Blog</h2>
+
+      <div class="posts">
+        {% for post in paginator.posts %}
+        <div class="post">
+          <h1 class="post-title">
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </h1>
+
+          <span class="post-date">{{ post.date | date_to_string }}</span>
+
+          {{ post.excerpt }}
+
+          <a href="{{ post.url }}">Read more &raquo;</a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="pagination">
+        {% if paginator.next_page %}
+          <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+        {% else %}
+          <span class="pagination-item older">Older</span>
+        {% endif %}
+        {% if paginator.previous_page %}
+          {% if paginator.page == 2 %}
+            <a class="pagination-item newer" href="/">Newer</a>
+          {% else %}
+            <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+          {% endif %}
+        {% else %}
+          <span class="pagination-item newer">Newer</span>
+        {% endif %}
+      </div>
+
+    </div>
+    <div class="page" id="about">
+      <h2>Noelene Walker</h2>
+    </div>
+
+
+
+
