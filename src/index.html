@@ -9,35 +9,52 @@ title: Home
       <h2>Portafolio</h2>
       <div class="row">
         <div class="col-sm-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, asperiores ea beatae. Deleniti qui, quas sed voluptate fugit nihil sint maxime distinctio. Accusamus quibusdam recusandae laboriosam enim. Expedita, laudantium sunt!</p>
+          <img src="http://placehold.it/300x300">
         </div>
         <div class="col-sm-4">
-          <p>Ipsum aliquam aspernatur enim, sed, voluptatibus dolorum dolore vitae dolor non, officia consequatur provident tempora assumenda. Sed nihil sit voluptates debitis impedit vero aspernatur ullam, architecto placeat facilis quos. Quos.</p>
+          <img src="http://placehold.it/300x300">
         </div>
         <div class="col-sm-4">
-          <p>Sapiente inventore facere sit distinctio debitis delectus repellendus, explicabo aliquid molestias, veniam, autem quasi qui dignissimos! Ipsum soluta, veniam tempora repudiandae natus, similique nostrum aperiam, laborum sunt amet voluptatem esse.</p>
+          <img src="http://placehold.it/300x300">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="http://placehold.it/300x300">
+        </div>
+        <div class="col-sm-4">
+          <img src="http://placehold.it/300x300">
+        </div>
+        <div class="col-sm-4">
+          <img src="http://placehold.it/300x300">
         </div>
       </div>
     </div>
+
+  <div class="container page" id="portafolio">
     <div class="page" id="blog">
       <h2>Mi Blog</h2>
 
-      <div class="posts">
-        {% for post in paginator.posts %}
-        <div class="post">
-          <h1 class="post-title">
-            <a href="{{ post.url }}">
-              {{ post.title }}
-            </a>
-          </h1>
-
-          <span class="post-date">{{ post.date | date_to_string }}</span>
-
-          {{ post.excerpt }}
-
-          <a href="{{ post.url }}">Read more &raquo;</a>
+      <div class="row">
+        <div class="">
+          <div class="posts">
+            {% for post in paginator.posts %}
+            <div class="post col-md-4">
+              <h3 class="post-title">
+                <a href="{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h3>
+          
+              <span class="post-date">{{ post.date | date_to_string }}</span>
+          
+              {{ post.excerpt }}
+          
+              <a href="{{ post.url }}">Read more &raquo;</a>
+            </div>
+            {% endfor %}
+          </div>
         </div>
-        {% endfor %}
       </div>
 
       <div class="pagination">
@@ -56,11 +73,38 @@ title: Home
           <span class="pagination-item newer">Newer</span>
         {% endif %}
       </div>
+    </div>
+  </div><!-- container -->
 
-    </div>
-    <div class="page" id="about">
-      <h2>Noelene Walker</h2>
-    </div>
+<section id="about">
+  <div class="container">
+      <div class="row">
+        <h2 class="col-md-offset-5">Noelene Walker</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum praesentium minima iusto assumenda expedita vero quas corporis optio eos pariatur temporibus aspernatur similique quia, non esse adipisci nesciunt. Optio.</p>
+        </div>
+        <div class="col-md-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum praesentium minima iusto assumenda expedita vero quas corporis optio eos pariatur temporibus aspernatur similique quia, non esse adipisci nesciunt. Optio.</p>
+        </div>
+        <div class="col-md-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum praesentium minima iusto assumenda expedita vero quas corporis optio eos pariatur temporibus aspernatur similique quia, non esse adipisci nesciunt. Optio.</p>
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="col-md-2 col-md-offset-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum praesentium minima iusto assumenda expedita vero quas corporis optio eos pariatur temporibus aspernatur similique quia, non esse adipisci nesciunt. Optio.</p>
+        </div>
+        <div class="col-md-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum praesentium minima iusto assumenda expedita vero quas corporis optio eos pariatur temporibus aspernatur similique quia, non esse adipisci nesciunt. Optio.</p>
+        </div>
+        <div class="col-md-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum praesentium minima iusto assumenda expedita vero quas corporis optio eos pariatur temporibus aspernatur similique quia, non esse adipisci nesciunt. Optio.</p>
+        </div>                 
+      </div>
+  </div><!-- container -->
+</section>
 
 
 

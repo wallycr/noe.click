@@ -4,17 +4,51 @@
  * 
  */
 
-/*
- * Contents
- *
- * Global resets
- * Masthead
- * Sidebar
- * Slide effect
- * Posts and pages
- * Pagination
- * Reverse layout
- * Themes
- */
 
+/** Body **/
+body {
+  padding-top:55px;
+}
+
+/** Main Navigation **/
+header .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+header .navbar-default .navbar-nav a {
+  padding: 5px 8px;
+}
+
+
+header .navbar-default .navbar-nav .active a {
+  font-weight: 700;
+  background: transparent;
+  border-bottom: 4px solid #EEC856;
+  text-shadow: none;
+}
+
+header .navbar-default .navbar-nav .active a:hover {
+  background: transparent;
+  text-shadow: none;
+}
+
+header .navbar-collapse {
+  background-color: rgba(0,0,0, .5);
+}
+
+/** About Noelene **/
+#about {
+  background-image:url('../images/bgs/bgNoe02.png');
+  min-height:500px;
+  background-color:#b0b2af;
+  background-repeat:no-repeat;
+}
+
+/** Footer **/
+footer {
+  background: #95a5a6;
+  font-size:.8em;
+  padding: 20px 0 40px 0;
+}
 
